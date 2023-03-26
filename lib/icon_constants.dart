@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+
+const icon1 = "assets/Icon1.png";
+const icon2 = "assets/Icon2.png";
+const icon3 = "assets/Icon3.png";
+const icon4 = "assets/Icon4.png";
+const icon5 = "assets/Icon5.png";
+const icon6 = "assets/Icon6.png";
+const icon7 = "assets/Icon7.png";
+const icon8 = "assets/Icon8.png";
+const icon1_bg = Color.fromRGBO(114, 16, 255, 0.08);
+const icon2_bg = Color.fromRGBO(255, 152, 0, 0.08);
+const icon3_bg = Color.fromRGBO(51, 94, 247, 0.08);
+const icon4_bg = Color.fromRGBO(250, 204, 21, 0.08);
+const icon5_bg = Color.fromRGBO(247, 85, 85, 0.08);
+const icon6_bg = Color.fromRGBO(76, 175, 80, 0.08);
+const icon7_bg = Color.fromRGBO(0, 188, 212, 0.08);
+const icon8_bg = Color.fromRGBO(114, 16, 255, 0.08);
+const Union = "assets/Union.png";
+const bell = "assets/bell.png";
+const save = "assets/save.png";
+const Special_offers = "assets/promo.png";
+const card_image1 = "assets/card_image1.png";
+const card_image2 = "assets/card_image2.png";
+const card_image3 = "assets/card_image3.png";
+const card_image4 = "assets/card_image4.png";
+const picture = "assets/Ellipse.png";
