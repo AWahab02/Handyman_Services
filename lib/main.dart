@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:task/color_constants.dart';
 import 'package:task/icon_constants.dart';
+import 'package:task/onboarding_screens/splash.dart';
 import 'package:task/widgets/Icon_Card.dart';
 import 'package:task/widgets/Offers.dart';
 import 'package:task/widgets/Search_Field.dart';
 import 'package:task/widgets/Services.dart';
 import 'package:task/widgets/User_Tile.dart';
 import 'widgets/action_chip.dart';
+import 'onboarding_screens/splash.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
   runApp(MaterialApp(
     theme: ThemeData(fontFamily: 'Urbanist'),
-    home: const MyApp(),
+    home: const Splash(),
   ));
 }
 
