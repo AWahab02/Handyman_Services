@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:task/Lets_in/Sign_in.dart';
 import 'package:task/color_constants.dart';
 import 'package:task/icon_constants.dart';
 
@@ -60,19 +61,23 @@ class IntroScreen extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            child: Center(
-              child: Text(
-                "Sign in with password",
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
+          GestureDetector(
+            onTap: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => sign_in())),
+            child: Container(
+              child: Center(
+                child: Text(
+                  "Sign in with password",
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.w700),
+                ),
               ),
+              margin: EdgeInsets.only(top: 18, left: 24, right: 24),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20), color: purple_color),
+              height: 58,
+              width: 380,
             ),
-            margin: EdgeInsets.only(top: 18, left: 24, right: 24),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: purple_color),
-            height: 58,
-            width: 380,
           ),
           Row(
             children: [

@@ -34,3 +34,5 @@ const intro_frame = "assets/intro_frame.png";
 const facebook_logo = "assets/Facebook_logo.png";
 const google_logo = "assets/Google_icon.png";
 const apple_logo = "assets/Apple_Icon.png";
+const fingerprint_icon = "assets/fingerprint_icon.png";
+const fingerprint_alert = "assets/fingerprint_alert.png";

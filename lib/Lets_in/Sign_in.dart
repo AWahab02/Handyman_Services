@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:task/Account_Setup/fill_profile.dart';
-import 'package:task/Lets_in/Sign_in.dart';
-import 'package:task/color_constants.dart';
-import 'package:task/icon_constants.dart';
-import 'package:task/widgets/button.dart';
-import 'package:task/widgets/form_inputs.dart';
 
-class Signup_main extends StatelessWidget {
-  const Signup_main({super.key});
+import '../color_constants.dart';
+import '../icon_constants.dart';
+import '../widgets/form_inputs.dart';
+import 'Sign_up.dart';
 
+class sign_in extends StatefulWidget {
+  const sign_in({super.key});
+
+  @override
+  State<sign_in> createState() => _sign_inState();
+}
+
+class _sign_inState extends State<sign_in> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +26,7 @@ class Signup_main extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 24),
               margin: EdgeInsets.only(top: 100),
               child: Text(
-                "Create your Account",
+                "Login to your Account",
                 style: TextStyle(
                     fontSize: 48,
                     fontWeight: FontWeight.w700,
@@ -30,7 +34,7 @@ class Signup_main extends StatelessWidget {
               ),
             ),
             Container(
-                padding: EdgeInsets.only(top: 48, bottom: 20),
+                padding: EdgeInsets.only(top: 36, bottom: 20),
                 child: form_input(hinttext: "Email", image: Icons.email)),
             Container(
                 padding: EdgeInsets.only(bottom: 20),
@@ -55,26 +59,30 @@ class Signup_main extends StatelessWidget {
                 )
               ],
             ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => account_setup())),
-              child: Container(
-                child: Center(
-                  child: Text(
-                    "Sign up",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 16),
-                  ),
+            Container(
+              child: Center(
+                child: Text(
+                  "Sign in",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16),
                 ),
-                margin:
-                    EdgeInsets.only(top: 20, bottom: 30, left: 24, right: 24),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: purple_color),
-                height: 58,
-                width: 380,
+              ),
+              margin: EdgeInsets.only(top: 20, bottom: 20, left: 24, right: 24),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20), color: purple_color),
+              height: 58,
+              width: 380,
+            ),
+            Container(
+              child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Forgot your password?",
+                  style: TextStyle(
+                      color: purple_color, fontWeight: FontWeight.w700),
+                ),
               ),
             ),
             Center(
@@ -147,7 +155,7 @@ class Signup_main extends StatelessWidget {
                   SizedBox(width: 110),
                   Center(
                     child: Text(
-                      "Already have an account?",
+                      "Don't have an account?",
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.w400),
                     ),
@@ -155,10 +163,10 @@ class Signup_main extends StatelessWidget {
                   TextButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => sign_in()));
+                            builder: (BuildContext context) => Signup_main()));
                       },
                       child: Text(
-                        "Sign in",
+                        "Sign Up",
                         style: TextStyle(color: purple_color),
                       ))
                 ],
