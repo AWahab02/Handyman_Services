@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:task/home/bookmarked.dart';
+import 'package:task/home/notifications.dart';
 import '../icon_constants.dart';
+import '../main.dart';
 
 class User_Tile extends StatelessWidget {
   const User_Tile({
@@ -14,7 +17,21 @@ class User_Tile extends StatelessWidget {
         height: 20,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Image.asset(bell), Image.asset(save)],
+          children: [
+            GestureDetector(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => notifs()));
+                },
+                child: Image.asset(bell)),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => bookmarked()));
+              },
+              child: Image.asset(save),
+            )
+          ],
         ),
       ),
       leading: const CircleAvatar(

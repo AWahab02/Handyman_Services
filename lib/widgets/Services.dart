@@ -4,6 +4,7 @@ import '../color_constants.dart';
 import '../icon_constants.dart';
 
 class Sevices extends StatelessWidget {
+  final String fullname;
   final String Title_arg;
   final String Price;
   final String image;
@@ -12,6 +13,7 @@ class Sevices extends StatelessWidget {
     required this.Title_arg,
     required this.Price,
     required this.image,
+    required this.fullname,
   });
 
   @override
@@ -30,15 +32,98 @@ class Sevices extends StatelessWidget {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Text(
-                      "Full Name",
+                      fullname,
                       style: TextStyle(color: Colors.white),
                     ),
                     SizedBox(width: 100),
-                    Icon(
-                      Icons.bookmark,
-                      color: purple_color,
+                    GestureDetector(
+                      onTap: () {
+                        showModalBottomSheet(
+                            context: context,
+                            builder: (BuildContext buildcontext) {
+                              return Container(
+                                height: 380,
+                                color: bg_color,
+                                child: Padding(
+                                  padding: EdgeInsets.all(8),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Container(
+                                        padding: EdgeInsets.symmetric(
+                                            vertical: 24, horizontal: 24),
+                                        child: Text(
+                                          "Remove from Bookmark?",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 24,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        color: Colors.grey[800],
+                                        height: 1,
+                                        width: 380,
+                                      ),
+                                      Sevices(
+                                          Title_arg: this.Title_arg,
+                                          Price: this.Price,
+                                          image: this.image,
+                                          fullname: this.fullname),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            child: Center(
+                                              child: Text(
+                                                "Cancel",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.w700,
+                                                    fontSize: 16),
+                                              ),
+                                            ),
+                                            margin: EdgeInsets.only(
+                                                top: 24, left: 24, right: 12),
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(25),
+                                                color: textfield_color),
+                                            height: 58,
+                                            width: 150,
+                                          ),
+                                          Container(
+                                            child: Center(
+                                              child: Text(
+                                                "Yes, Remove",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.w700,
+                                                    fontSize: 16),
+                                              ),
+                                            ),
+                                            margin: EdgeInsets.only(
+                                                top: 24, left: 24, right: 12),
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(25),
+                                                color: purple_color),
+                                            height: 58,
+                                            width: 150,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            });
+                      },
+                      child: Icon(
+                        Icons.bookmark,
+                        color: purple_color,
+                      ),
                     ),
                   ],
                 ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:task/forget_reset/forgot_pass.dart';
 
 import '../color_constants.dart';
 import '../icon_constants.dart';
@@ -77,7 +78,10 @@ class _sign_inState extends State<sign_in> {
             ),
             Container(
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: ((context) => forgot_password())));
+                },
                 child: Text(
                   "Forgot your password?",
                   style: TextStyle(

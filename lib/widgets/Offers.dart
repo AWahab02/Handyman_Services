@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task/home/special_offers.dart';
 import '../color_constants.dart';
 
 class Offers extends StatelessWidget {
@@ -21,7 +22,10 @@ class Offers extends StatelessWidget {
                 color: Colors.white, fontSize: 20, fontWeight: FontWeight.w700),
           ),
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: ((context) => Special_Offers())));
+              },
               child: Text(
                 "See all",
                 style: TextStyle(

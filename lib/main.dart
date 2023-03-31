@@ -67,23 +67,37 @@ class MyApp extends StatelessWidget {
           const Offers(argument: "Most Popular Services"),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
+            children: [
               action_chip(title_name: "All"),
               action_chip(title_name: "Cleaning"),
               action_chip(title_name: "Repairing"),
               action_chip(title_name: "Painting"),
             ],
           ),
-          const Sevices(
-              Title_arg: "House Cleaning", Price: "\$25", image: card_image1),
-          const Sevices(
-              Title_arg: "Floor Cleaning", Price: "\$20", image: card_image2),
-          const Sevices(
-              Title_arg: "Washing Clothes", Price: "\$22", image: card_image3),
-          const Sevices(
-              Title_arg: "Bathroom Cleaning",
-              Price: "\$24",
-              image: card_image4),
+          Sevices(
+            Title_arg: "House Cleaning",
+            Price: "\$25",
+            image: card_image1,
+            fullname: "FullName",
+          ),
+          Sevices(
+            Title_arg: "Floor Cleaning",
+            Price: "\$20",
+            image: card_image2,
+            fullname: "FullName",
+          ),
+          Sevices(
+            Title_arg: "Washing Clothes",
+            Price: "\$22",
+            image: card_image3,
+            fullname: "FullName",
+          ),
+          Sevices(
+            Title_arg: "Bathroom Cleaning",
+            Price: "\$24",
+            image: card_image4,
+            fullname: "FullName",
+          ),
         ],
       ),
       bottomNavigationBar: Container(
