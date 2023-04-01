@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:task/Account_Setup/create_PIN.dart';
 import 'package:task/Account_Setup/fingerprint.dart';
 import 'package:task/color_constants.dart';
+import 'package:task/final_booking/booking_page1.dart';
 import 'package:task/icon_constants.dart';
 import 'package:task/widgets/account_create_country.dart';
 import 'package:task/widgets/account_create_field.dart';
@@ -46,9 +48,16 @@ class _painting_bookingState extends State<painting_booking> {
             ),
             car_repairing_title(title: "Size of House"),
             account_create_field(title: "Medium"),
+            car_repairing_title(title: "Select Paint Colour"),
+            SizedBox(height: 20),
+            BlockPicker(
+                pickerColor: Colors.red,
+                onColorChanged: (Color color) {
+                  print(color);
+                }),
             GestureDetector(
               onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => create_pin())),
+                  .push(MaterialPageRoute(builder: (context) => booking_1())),
               child: Container(
                 child: Center(
                   child: Text(

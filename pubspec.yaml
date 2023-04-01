@@ -39,6 +39,9 @@ dependencies:
   smooth_page_indicator: ^1.0.1
   country_code_picker: ^3.0.0
   pin_code_fields: ^7.4.0
+  flutter_colorpicker: ^1.0.3
+  syncfusion_flutter_calendar: ^21.1.37
+  table_calendar: ^3.0.9
 
 
 

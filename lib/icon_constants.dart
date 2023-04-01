@@ -73,3 +73,6 @@ const detail_3 = "assets/service_details_icon (3).png";
 const detail_4 = "assets/service_details_icon (2).png";
 const detail_5 = "assets/service_details_icon (1).png";
 const detail_6 = "assets/service_details_icon (6).png";
+const map = "assets/map.png";
+const location = "assets/location.png";
+const paypal = "assets/Paypal.png";
