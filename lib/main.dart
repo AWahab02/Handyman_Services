@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:task/color_constants.dart';
+import 'package:task/forget_reset/create_new_pass.dart';
+import 'package:task/home/all_services.dart';
+import 'package:task/home/popular_services.dart';
+import 'package:task/home/special_offers.dart';
 import 'package:task/icon_constants.dart';
 import 'package:task/onboarding_screens/splash.dart';
+import 'package:task/service_details/cleaning.dart';
 import 'package:task/widgets/Icon_Card.dart';
 import 'package:task/widgets/Offers.dart';
 import 'package:task/widgets/Search_Field.dart';
@@ -29,20 +34,39 @@ class MyApp extends StatelessWidget {
         children: [
           const User_Tile(),
           const Search_Field(),
-          const Offers(argument: "Special Offers"),
+          const Offers(
+            argument: "Special Offers",
+            nextpage: Special_Offers(),
+          ),
           Container(
               margin: const EdgeInsets.symmetric(horizontal: 20),
               child: Image.asset(Special_offers)),
-          const Offers(argument: "Services"),
+          const Offers(argument: "Services", nextpage: all_services()),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                icon_card(title: "Cleaning", image: icon1, colour: icon1_bg),
-                icon_card(title: "Repairing", image: icon2, colour: icon2_bg),
-                icon_card(title: "Painting", image: icon3, colour: icon3_bg),
-                icon_card(title: "Laundry", image: icon4, colour: icon4_bg),
+                icon_card(
+                    title: "Cleaning",
+                    image: icon1,
+                    colour: icon1_bg,
+                    nextscreen: cleaning()),
+                icon_card(
+                    title: "Repairing",
+                    image: icon2,
+                    colour: icon2_bg,
+                    nextscreen: cleaning()),
+                icon_card(
+                    title: "Painting",
+                    image: icon3,
+                    colour: icon3_bg,
+                    nextscreen: cleaning()),
+                icon_card(
+                    title: "Laundry",
+                    image: icon4,
+                    colour: icon4_bg,
+                    nextscreen: cleaning()),
               ],
             ),
           ),
@@ -51,10 +75,26 @@ class MyApp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                icon_card(title: "Appliance", image: icon5, colour: icon5_bg),
-                icon_card(title: "Plumber", image: icon6, colour: icon6_bg),
-                icon_card(title: "Shifting", image: icon7, colour: icon7_bg),
-                icon_card(title: "More", image: icon8, colour: icon8_bg),
+                icon_card(
+                    title: "Appliance",
+                    image: icon5,
+                    colour: icon5_bg,
+                    nextscreen: cleaning()),
+                icon_card(
+                    title: "Plumber",
+                    image: icon6,
+                    colour: icon6_bg,
+                    nextscreen: cleaning()),
+                icon_card(
+                    title: "Shifting",
+                    image: icon7,
+                    colour: icon7_bg,
+                    nextscreen: cleaning()),
+                icon_card(
+                    title: "More",
+                    image: icon8,
+                    colour: icon8_bg,
+                    nextscreen: cleaning()),
               ],
             ),
           ),
@@ -64,7 +104,10 @@ class MyApp extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 20),
             color: searchfield_color,
           ),
-          const Offers(argument: "Most Popular Services"),
+          const Offers(
+            argument: "Most Popular Services",
+            nextpage: popular_services(),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

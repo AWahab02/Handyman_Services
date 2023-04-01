@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:task/forget_reset/forgot_pass.dart';
+import 'package:task/main.dart';
 
 import '../color_constants.dart';
 import '../icon_constants.dart';
@@ -60,21 +61,29 @@ class _sign_inState extends State<sign_in> {
                 )
               ],
             ),
-            Container(
-              child: Center(
-                child: Text(
-                  "Sign in",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (builder) => MyApp()));
+              },
+              child: Container(
+                child: Center(
+                  child: Text(
+                    "Sign in",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16),
+                  ),
                 ),
+                margin:
+                    EdgeInsets.only(top: 20, bottom: 20, left: 24, right: 24),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: purple_color),
+                height: 58,
+                width: 380,
               ),
-              margin: EdgeInsets.only(top: 20, bottom: 20, left: 24, right: 24),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: purple_color),
-              height: 58,
-              width: 380,
             ),
             Container(
               child: TextButton(

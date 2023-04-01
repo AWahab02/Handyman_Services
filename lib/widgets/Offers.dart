@@ -4,9 +4,11 @@ import '../color_constants.dart';
 
 class Offers extends StatelessWidget {
   final String argument;
+  final Widget nextpage;
   const Offers({
     super.key,
     required this.argument,
+    required this.nextpage,
   });
 
   @override
@@ -23,8 +25,8 @@ class Offers extends StatelessWidget {
           ),
           TextButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: ((context) => Special_Offers())));
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: ((context) => nextpage)));
               },
               child: Text(
                 "See all",
