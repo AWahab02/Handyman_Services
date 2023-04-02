@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:task/Account_Setup/fingerprint.dart';
+import 'package:task/final_booking/receipt.dart';
 import '../color_constants.dart';
 import '../icon_constants.dart';
 
@@ -112,22 +113,28 @@ class _payment_pinState extends State<payment_pin> {
                                   color: Colors.white),
                             ),
                           ),
-                          Container(
-                            child: Center(
-                              child: Text(
-                                "View E-Receipt",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w700),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (builder) => receipt()));
+                            },
+                            child: Container(
+                              child: Center(
+                                child: Text(
+                                  "View E-Receipt",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700),
+                                ),
                               ),
+                              margin: EdgeInsets.only(
+                                  top: 40.5, left: 24, right: 24),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: purple_color),
+                              height: 58,
+                              width: 280,
                             ),
-                            margin:
-                                EdgeInsets.only(top: 40.5, left: 24, right: 24),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: purple_color),
-                            height: 58,
-                            width: 280,
                           ),
                           Container(
                             child: Center(

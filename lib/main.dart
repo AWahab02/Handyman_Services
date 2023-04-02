@@ -5,7 +5,11 @@ import 'package:task/home/all_services.dart';
 import 'package:task/home/popular_services.dart';
 import 'package:task/home/special_offers.dart';
 import 'package:task/icon_constants.dart';
+import 'package:task/inbox/chats.dart';
+import 'package:task/my_bookings/cancelled.dart';
+import 'package:task/my_calander/page_1.dart';
 import 'package:task/onboarding_screens/splash.dart';
+import 'package:task/profile/profile.dart';
 import 'package:task/service_details/cleaning.dart';
 import 'package:task/widgets/Icon_Card.dart';
 import 'package:task/widgets/Offers.dart';
@@ -152,19 +156,37 @@ class MyApp extends StatelessWidget {
           unselectedItemColor: searchfield_color,
           selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
           unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
-          items: const [
+          items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home_filled),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.text_snippet_outlined), label: 'Bookings'),
+              icon: GestureDetector(
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => cancelled())),
+                child: Icon(Icons.text_snippet_outlined),
+              ),
+              label: 'Bookings',
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.calendar_month_outlined), label: 'Calender'),
+                icon: GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => calander_1())),
+                    child: Icon(Icons.calendar_month_outlined)),
+                label: 'Calender'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.message_outlined), label: 'Inbox'),
+                icon: GestureDetector(
+                    onTap: () => Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) => chats())),
+                    child: Icon(Icons.message_outlined)),
+                label: 'Inbox'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person_outline_rounded), label: 'Profile'),
+                icon: GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => profile_1())),
+                    child: Icon(Icons.person_outline_rounded)),
+                label: 'Profile'),
           ],
           selectedItemColor: purple_color,
         ),

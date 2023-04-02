@@ -8,6 +8,7 @@ import 'package:task/Account_Setup/fingerprint.dart';
 import 'package:task/color_constants.dart';
 import 'package:task/final_booking/location.dart';
 import 'package:task/final_booking/pin.dart';
+import 'package:task/final_booking/review.dart';
 import 'package:task/icon_constants.dart';
 import 'package:task/service_details_2/car_repairing_1.dart';
 import 'package:task/widgets/account_create_country.dart';
@@ -50,7 +51,7 @@ class _booking_4State extends State<booking_4> {
               payment_tile(title1: "Facebook Wallet", image: facebook_logo),
               GestureDetector(
                 onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => payment_pin())),
+                    MaterialPageRoute(builder: (context) => review_summary())),
                 child: Container(
                   margin: EdgeInsets.symmetric(vertical: 24),
                   child: Center(
