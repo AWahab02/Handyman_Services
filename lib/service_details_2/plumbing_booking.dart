@@ -9,6 +9,8 @@ import 'package:task/widgets/account_create_country.dart';
 import 'package:task/widgets/account_create_field.dart';
 import 'package:task/widgets/account_create_field_icon.dart';
 
+import '../final_booking/booking_page1.dart';
+
 class plumbing_booking extends StatefulWidget {
   const plumbing_booking({super.key});
 
@@ -50,7 +52,7 @@ class _plumbing_bookingState extends State<plumbing_booking> {
             account_create_field(title: "Description"),
             GestureDetector(
               onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => create_pin())),
+                  .push(MaterialPageRoute(builder: (context) => booking_1())),
               child: Container(
                 child: Center(
                   child: Text(

@@ -158,27 +158,23 @@ class _cleaning_detailState extends State<cleaning_detail> {
               ),
             ),
             Offers(argument: "Photos & Videos", nextpage: cleaning_detail()),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: Row(
-                children: [
-                  Image.asset(col10),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(col11),
-                      SizedBox(height: 10),
-                      Image.asset(col12),
-                    ],
-                  ),
-                ],
-              ),
+            Row(
+              children: [
+                Image.asset(col10),
+                SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  children: [
+                    Image.asset(col11),
+                    SizedBox(height: 10),
+                    Image.asset(col12),
+                  ],
+                ),
+              ],
             ),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               child: Row(
                 children: [
                   Column(
@@ -195,39 +191,36 @@ class _cleaning_detailState extends State<cleaning_detail> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Icon(
-                    Icons.star_half_outlined,
-                    color: Colors.amber,
-                  ),
-                  Text(
-                    "4.8 (4,479 reviews)",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700),
-                  ),
-                  SizedBox(
-                    width: 90,
-                  ),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: ((context) => cleaning_detail())));
-                      },
-                      child: Text(
-                        "See all",
-                        style: TextStyle(
-                            color: purple_color,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700),
-                      )),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Icon(
+                  Icons.star_half_outlined,
+                  color: Colors.amber,
+                ),
+                Text(
+                  "4.8 (4,479 reviews)",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700),
+                ),
+                SizedBox(
+                  width: 90,
+                ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: ((context) => cleaning_detail())));
+                    },
+                    child: Text(
+                      "See all",
+                      style: TextStyle(
+                          color: purple_color,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700),
+                    )),
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

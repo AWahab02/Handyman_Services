@@ -54,11 +54,11 @@ class _booking_2State extends State<booking_2> {
                   image: notif1),
               promo_tile(
                   title1: "Discount 40% Off",
-                  subtitle: "Special promo only valid today",
+                  subtitle: "Special promo only today",
                   image: notif4),
               promo_tile(
                   title1: "Discount 40% Off",
-                  subtitle: "Special promo only valid today",
+                  subtitle: "Special promo only today",
                   image: notif2),
               GestureDetector(
                 onTap: () => Navigator.of(context)
@@ -206,9 +206,10 @@ class _promo_tileState extends State<promo_tile> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.centerLeft,
       margin: EdgeInsets.only(top: 24),
       height: 128,
-      width: 440,
+      width: 400,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: textfield_color,
@@ -219,7 +220,7 @@ class _promo_tileState extends State<promo_tile> {
           Container(
               margin: EdgeInsets.symmetric(horizontal: 24),
               height: 80,
-              width: 80,
+              width: 40,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: icon1_bg,

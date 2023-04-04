@@ -12,14 +12,24 @@ class Splash extends StatefulWidget {
   State<Splash> createState() => _SplashState();
 }
 
-class _SplashState extends State<Splash> {
+class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
+  late final AnimationController _controller =
+      new AnimationController(vsync: this, duration: Duration(seconds: 2))
+        ..repeat();
   @override
   void initState() {
     super.initState();
+
     Timer(const Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (BuildContext context) => Carousel()));
     });
+  }
+
+  @override
+  dispose() {
+    _controller.dispose(); // you need this
+    super.dispose();
   }
 
   Widget build(BuildContext context) {
@@ -38,8 +48,17 @@ class _SplashState extends State<Splash> {
               ],
             ),
             SizedBox(height: 150),
-            Container(
-              child: Image.asset(splash_icon1),
+            AnimatedBuilder(
+              animation: _controller,
+              builder: (_, child) {
+                return Transform.rotate(
+                  angle: _controller.value * 2 * 3.14,
+                  child: child,
+                );
+              },
+              child: Container(
+                child: Image.asset(splash_icon1),
+              ),
             )
           ],
         ),

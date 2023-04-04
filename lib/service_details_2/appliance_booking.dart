@@ -9,6 +9,8 @@ import 'package:task/widgets/account_create_country.dart';
 import 'package:task/widgets/account_create_field.dart';
 import 'package:task/widgets/account_create_field_icon.dart';
 
+import '../final_booking/booking_page1.dart';
+
 class appliance_booking extends StatefulWidget {
   const appliance_booking({super.key});
 
@@ -52,8 +54,8 @@ class _appliance_bookingState extends State<appliance_booking> {
               appliance_booking_tile(title: "Dining Room"),
               appliance_booking_tile(title: "Garage"),
               GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => create_pin())),
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => booking_1())),
                 child: Container(
                   margin: EdgeInsets.symmetric(vertical: 24),
                   child: Center(

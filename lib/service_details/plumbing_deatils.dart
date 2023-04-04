@@ -159,27 +159,23 @@ class _plumbing_detailState extends State<plumbing_detail> {
               ),
             ),
             Offers(argument: "Photos & Videos", nextpage: painting_detail()),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: Row(
-                children: [
-                  Image.asset(col10),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(col11),
-                      SizedBox(height: 10),
-                      Image.asset(col12),
-                    ],
-                  ),
-                ],
-              ),
+            Row(
+              children: [
+                Image.asset(col10),
+                SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  children: [
+                    Image.asset(col11),
+                    SizedBox(height: 10),
+                    Image.asset(col12),
+                  ],
+                ),
+              ],
             ),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               child: Row(
                 children: [
                   Column(

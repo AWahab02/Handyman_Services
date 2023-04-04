@@ -17,6 +17,7 @@ class sign_in extends StatefulWidget {
 }
 
 class _sign_inState extends State<sign_in> {
+  bool showvalue = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,13 +45,18 @@ class _sign_inState extends State<sign_in> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(color: purple_color, width: 2.5)),
-                ),
+                Checkbox(
+                    side: BorderSide(color: purple_color),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    value: this.showvalue,
+                    activeColor: purple_color,
+                    checkColor: Colors.white,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        this.showvalue = value!;
+                      });
+                    }),
                 SizedBox(
                   width: 12,
                 ),

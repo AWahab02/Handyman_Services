@@ -25,128 +25,130 @@ class _review_summaryState extends State<review_summary> {
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24),
-        child: Column(
-          children: [
-            Container(
-              width: 380,
-              height: 238,
-              decoration: BoxDecoration(
-                color: textfield_color,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              margin: EdgeInsets.only(top: 20),
-              child: Column(
-                children: [
-                  review_tile(left: "Services", right: "House Cleaning"),
-                  review_tile(left: "Category", right: "Cleaning"),
-                  review_tile(left: "Workers", right: "Jenny Wilson"),
-                  review_tile(
-                      left: "Date & Time", right: "Dec 23, 2024 | 10:00 AM"),
-                  review_tile(left: "Working Hours", right: "2 hours"),
-                ],
-              ),
-            ),
-            Container(
-              height: 80,
-              margin: EdgeInsets.only(top: 20),
-              decoration: BoxDecoration(
-                color: textfield_color,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("House Cleaning Details",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 14)),
-                    Icon(
-                      Icons.keyboard_arrow_down_rounded,
-                      color: Colors.white,
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              width: 380,
-              height: 160,
-              decoration: BoxDecoration(
-                color: textfield_color,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              margin: EdgeInsets.only(top: 20),
-              child: Column(
-                children: [
-                  review_tile(left: "House Cleaning", right: "\$125.50"),
-                  review_tile(left: "Promo", right: "\-37.50"),
-                  Container(
-                    margin: EdgeInsets.only(top: 12),
-                    color: Colors.grey[800],
-                    height: 1,
-                    width: 300,
-                  ),
-                  review_tile(left: "Total", right: "\$-87.50"),
-                ],
-              ),
-            ),
-            Container(
-              height: 80,
-              margin: EdgeInsets.only(top: 20),
-              decoration: BoxDecoration(
-                color: textfield_color,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(google_logo),
-                    Text("**** **** **** **449",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 14)),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Change",
-                        style: TextStyle(
-                            color: purple_color,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 16),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => payment_pin())),
-              child: Container(
-                margin: EdgeInsets.symmetric(vertical: 24),
-                child: Center(
-                  child: Text(
-                    "Confirm Payment",
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.w700),
-                  ),
-                ),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: purple_color),
-                height: 58,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24),
+          child: Column(
+            children: [
+              Container(
                 width: 380,
+                height: 238,
+                decoration: BoxDecoration(
+                  color: textfield_color,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                margin: EdgeInsets.only(top: 20),
+                child: Column(
+                  children: [
+                    review_tile(left: "Services", right: "House Cleaning"),
+                    review_tile(left: "Category", right: "Cleaning"),
+                    review_tile(left: "Workers", right: "Jenny Wilson"),
+                    review_tile(
+                        left: "Date & Time", right: "Dec 23, 2024 | 10:00 AM"),
+                    review_tile(left: "Working Hours", right: "2 hours"),
+                  ],
+                ),
               ),
-            ),
-          ],
+              Container(
+                height: 80,
+                margin: EdgeInsets.only(top: 20),
+                decoration: BoxDecoration(
+                  color: textfield_color,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("House Cleaning Details",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14)),
+                      Icon(
+                        Icons.keyboard_arrow_down_rounded,
+                        color: Colors.white,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                width: 380,
+                height: 160,
+                decoration: BoxDecoration(
+                  color: textfield_color,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                margin: EdgeInsets.only(top: 20),
+                child: Column(
+                  children: [
+                    review_tile(left: "House Cleaning", right: "\$125.50"),
+                    review_tile(left: "Promo", right: "\-37.50"),
+                    Container(
+                      margin: EdgeInsets.only(top: 12),
+                      color: Colors.grey[800],
+                      height: 1,
+                      width: 300,
+                    ),
+                    review_tile(left: "Total", right: "\$-87.50"),
+                  ],
+                ),
+              ),
+              Container(
+                height: 80,
+                margin: EdgeInsets.only(top: 20),
+                decoration: BoxDecoration(
+                  color: textfield_color,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(google_logo),
+                      Text("**** **** **** **449",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14)),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Change",
+                          style: TextStyle(
+                              color: purple_color,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => payment_pin())),
+                child: Container(
+                  margin: EdgeInsets.symmetric(vertical: 24),
+                  child: Center(
+                    child: Text(
+                      "Confirm Payment",
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: purple_color),
+                  height: 58,
+                  width: 380,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

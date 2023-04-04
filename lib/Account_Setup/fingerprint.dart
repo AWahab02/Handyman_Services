@@ -17,7 +17,11 @@ class fingerprint extends StatefulWidget {
   State<fingerprint> createState() => _fingerprintState();
 }
 
-class _fingerprintState extends State<fingerprint> {
+class _fingerprintState extends State<fingerprint>
+    with TickerProviderStateMixin {
+  late final AnimationController _controller =
+      new AnimationController(vsync: this, duration: Duration(seconds: 2))
+        ..repeat();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

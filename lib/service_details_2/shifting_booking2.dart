@@ -9,6 +9,8 @@ import 'package:task/widgets/account_create_country.dart';
 import 'package:task/widgets/account_create_field.dart';
 import 'package:task/widgets/account_create_field_icon.dart';
 
+import '../final_booking/booking_page1.dart';
+
 class shifting_booking2 extends StatefulWidget {
   const shifting_booking2({super.key});
 
@@ -98,8 +100,8 @@ class _shifting_booking2State extends State<shifting_booking2> {
                 ),
               ),
               GestureDetector(
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => shifting_booking2())),
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => booking_1())),
                 child: Container(
                   margin: EdgeInsets.symmetric(vertical: 24),
                   child: Center(

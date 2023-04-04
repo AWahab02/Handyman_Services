@@ -42,6 +42,8 @@ dependencies:
   flutter_colorpicker: ^1.0.3
   syncfusion_flutter_calendar: ^21.1.37
   table_calendar: ^3.0.9
+  expandable: ^5.0.1
+  adaptive_theme: ^3.2.0
 
 
 

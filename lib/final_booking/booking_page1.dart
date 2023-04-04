@@ -111,7 +111,7 @@ class _booking_1State extends State<booking_1> {
                 children: [
                   Container(
                     margin: EdgeInsets.only(left: 0),
-                    width: 290,
+                    width: 270,
                     child: TextFormField(
                       decoration: InputDecoration(
                           filled: true,
@@ -171,13 +171,19 @@ class _booking_1State extends State<booking_1> {
   }
 }
 
-class cleaning_booking_tile extends StatelessWidget {
+class cleaning_booking_tile extends StatefulWidget {
   final String title;
   const cleaning_booking_tile({
     super.key,
     required this.title,
   });
 
+  @override
+  State<cleaning_booking_tile> createState() => _cleaning_booking_tileState();
+}
+
+class _cleaning_booking_tileState extends State<cleaning_booking_tile> {
+  int num = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -192,10 +198,10 @@ class cleaning_booking_tile extends StatelessWidget {
           Row(
             children: [
               Container(
-                width: 195,
+                width: 170,
                 padding: EdgeInsets.only(left: 24),
                 child: Text(
-                  title,
+                  widget.title,
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.w700),
                 ),
@@ -203,7 +209,10 @@ class cleaning_booking_tile extends StatelessWidget {
               Container(
                 height: 40,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    if (num > 0) num--;
+                    setState(() {});
+                  },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -223,18 +232,24 @@ class cleaning_booking_tile extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 20,
+                width: 30,
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: Text(
-                  "0",
+                  num.toString(),
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.w700),
+                    color: Colors.white,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 11,
+                  ),
                 ),
               ),
               Container(
                 height: 40,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    if (num < 10) num++;
+                    setState(() {});
+                  },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task/profile/help_center.dart';
 
 import '../color_constants.dart';
 
@@ -14,16 +15,20 @@ class account_create_field extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(24.0),
       child: TextFormField(
-          keyboardType: TextInputType.text,
-          keyboardAppearance: Brightness.dark,
-          decoration: InputDecoration(
-              fillColor: textfield_color,
-              filled: true,
-              hintText: title,
-              hintStyle: TextStyle(color: searchfield_color),
-              border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(10)))),
+        style: styleset,
+        keyboardType: TextInputType.text,
+        keyboardAppearance: Brightness.dark,
+        decoration: InputDecoration(
+          fillColor: textfield_color,
+          filled: true,
+          hintText: title,
+          hintStyle: TextStyle(color: searchfield_color),
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -10,7 +10,20 @@ import 'package:task/my_bookings/cancelled.dart';
 import 'package:task/my_calander/page_1.dart';
 import 'package:task/onboarding_screens/splash.dart';
 import 'package:task/profile/profile.dart';
+import 'package:task/service_details/appliance.dart';
+import 'package:task/service_details/appliance_detail.dart';
+import 'package:task/service_details/car_repair.dart';
 import 'package:task/service_details/cleaning.dart';
+import 'package:task/service_details/house_cleaning.dart';
+import 'package:task/service_details/laundry.dart';
+import 'package:task/service_details/laundry_detail.dart';
+import 'package:task/service_details/painting.dart';
+import 'package:task/service_details/painting_walls.dart';
+import 'package:task/service_details/plumbing.dart';
+import 'package:task/service_details/plumbing_deatils.dart';
+import 'package:task/service_details/repairing.dart';
+import 'package:task/service_details/shifting.dart';
+import 'package:task/service_details/shifting_details.dart';
 import 'package:task/widgets/Icon_Card.dart';
 import 'package:task/widgets/Offers.dart';
 import 'package:task/widgets/Search_Field.dart';
@@ -60,17 +73,17 @@ class MyApp extends StatelessWidget {
                     title: "Repairing",
                     image: icon2,
                     colour: icon2_bg,
-                    nextscreen: cleaning()),
+                    nextscreen: repairing()),
                 icon_card(
                     title: "Painting",
                     image: icon3,
                     colour: icon3_bg,
-                    nextscreen: cleaning()),
+                    nextscreen: painting()),
                 icon_card(
                     title: "Laundry",
                     image: icon4,
                     colour: icon4_bg,
-                    nextscreen: cleaning()),
+                    nextscreen: laundry()),
               ],
             ),
           ),
@@ -83,17 +96,17 @@ class MyApp extends StatelessWidget {
                     title: "Appliance",
                     image: icon5,
                     colour: icon5_bg,
-                    nextscreen: cleaning()),
+                    nextscreen: appliance()),
                 icon_card(
                     title: "Plumber",
                     image: icon6,
                     colour: icon6_bg,
-                    nextscreen: cleaning()),
+                    nextscreen: plumbing()),
                 icon_card(
                     title: "Shifting",
                     image: icon7,
                     colour: icon7_bg,
-                    nextscreen: cleaning()),
+                    nextscreen: shifting()),
                 icon_card(
                     title: "More",
                     image: icon8,
@@ -156,6 +169,32 @@ class MyApp extends StatelessWidget {
           unselectedItemColor: searchfield_color,
           selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
           unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
+          onTap: (value) {
+            if (value == 0) {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => MyApp()));
+            }
+
+            if (value == 1) {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => cancelled()));
+            }
+
+            if (value == 2) {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => calander_1()));
+            }
+
+            if (value == 3) {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => chats()));
+            }
+
+            if (value == 4) {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => profile_1()));
+            }
+          },
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home_filled),

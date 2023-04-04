@@ -9,6 +9,8 @@ import 'package:task/widgets/account_create_country.dart';
 import 'package:task/widgets/account_create_field.dart';
 import 'package:task/widgets/account_create_field_icon.dart';
 
+import '../final_booking/booking_page1.dart';
+
 class repairing_booking extends StatefulWidget {
   const repairing_booking({super.key});
 
@@ -52,7 +54,7 @@ class _repairing_bookingState extends State<repairing_booking> {
             account_create_field(title: "Plate Number"),
             GestureDetector(
               onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => create_pin())),
+                  .push(MaterialPageRoute(builder: (context) => booking_1())),
               child: Container(
                 child: Center(
                   child: Text(

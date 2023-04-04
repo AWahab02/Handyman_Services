@@ -1,5 +1,6 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:task/profile/help_center.dart';
 
 import '../color_constants.dart';
 
@@ -15,6 +16,7 @@ class account_create_field_country extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(24.0),
       child: TextFormField(
+          style: styleset,
           keyboardType: TextInputType.text,
           keyboardAppearance: Brightness.dark,
           decoration: InputDecoration(

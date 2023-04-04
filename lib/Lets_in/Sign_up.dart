@@ -8,9 +8,15 @@ import 'package:task/icon_constants.dart';
 import 'package:task/widgets/button.dart';
 import 'package:task/widgets/form_inputs.dart';
 
-class Signup_main extends StatelessWidget {
+class Signup_main extends StatefulWidget {
   const Signup_main({super.key});
 
+  @override
+  State<Signup_main> createState() => _Signup_mainState();
+}
+
+class _Signup_mainState extends State<Signup_main> {
+  bool showvalue = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,13 +44,18 @@ class Signup_main extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(color: purple_color, width: 2.5)),
-                ),
+                Checkbox(
+                    side: BorderSide(color: purple_color),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    value: this.showvalue,
+                    activeColor: purple_color,
+                    checkColor: Colors.white,
+                    onChanged: (bool? value) {
+                      setState(() {
+                        this.showvalue = value!;
+                      });
+                    }),
                 SizedBox(
                   width: 12,
                 ),

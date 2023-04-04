@@ -3,8 +3,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'package:task/color_constants.dart';
+import 'package:task/main.dart';
 import 'package:task/my_calander/page_2.dart';
 import 'package:task/widgets/Offers.dart';
+import '../inbox/chats.dart';
+import '../profile/profile.dart';
 import 'page_2.dart';
 import '../icon_constants.dart';
 import '../my_bookings/cancelled.dart';
@@ -20,39 +23,75 @@ class _calander_1State extends State<calander_1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: bg_color,
-        unselectedItemColor: searchfield_color,
-        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
-        unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_filled,
-              color: purple_color,
+      bottomNavigationBar: Container(
+        width: 30,
+        margin: const EdgeInsets.all(7),
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: bg_color,
+          unselectedItemColor: searchfield_color,
+          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
+          unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
+          onTap: (value) {
+            if (value == 0) {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => MyApp()));
+            }
+
+            if (value == 1) {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => cancelled()));
+            }
+
+            if (value == 2) {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => calander_1()));
+            }
+
+            if (value == 3) {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => chats()));
+            }
+
+            if (value == 4) {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => profile_1()));
+            }
+          },
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_filled),
+              label: 'Home',
             ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: GestureDetector(
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => calander_1())),
-              child: Icon(
-                Icons.text_snippet_outlined,
-                color: searchfield_color,
+            BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () => Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => cancelled())),
+                child: Icon(Icons.text_snippet_outlined),
               ),
+              label: 'Bookings',
             ),
-            label: 'Bookings',
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.calendar_month_outlined), label: 'Calender'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.message_outlined), label: 'Inbox'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline_rounded), label: 'Profile'),
-        ],
-        selectedItemColor: purple_color,
+            BottomNavigationBarItem(
+                icon: GestureDetector(
+                    onTap: () => Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => calander_1())),
+                    child: Icon(Icons.calendar_month_outlined)),
+                label: 'Calender'),
+            BottomNavigationBarItem(
+                icon: GestureDetector(
+                    onTap: () => Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => chats())),
+                    child: Icon(Icons.message_outlined)),
+                label: 'Inbox'),
+            BottomNavigationBarItem(
+                icon: GestureDetector(
+                    onTap: () => Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => profile_1())),
+                    child: Icon(Icons.person_outline_rounded)),
+                label: 'Profile'),
+          ],
+          selectedItemColor: purple_color,
+        ),
       ),
       backgroundColor: bg_color,
       appBar: AppBar(

@@ -7,9 +7,11 @@ import 'package:task/final_booking/location.dart';
 import 'package:task/final_booking/payment.dart';
 import 'package:task/icon_constants.dart';
 import 'package:task/my_calander/page_2.dart';
+import 'package:task/profile/profile.dart';
 
 import '../final_booking/promo_page.dart';
 import '../inbox/chats.dart';
+import '../main.dart';
 import '../my_calander/page_1.dart';
 
 class cancelled extends StatefulWidget {
@@ -177,6 +179,32 @@ class _cancelledState extends State<cancelled> {
             unselectedItemColor: searchfield_color,
             selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
             unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
+            onTap: (value) {
+              if (value == 0) {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => MyApp()));
+              }
+
+              if (value == 1) {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => cancelled()));
+              }
+
+              if (value == 2) {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => calander_1()));
+              }
+
+              if (value == 3) {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => chats()));
+              }
+
+              if (value == 4) {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => profile_1()));
+              }
+            },
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home_filled),
@@ -184,7 +212,7 @@ class _cancelledState extends State<cancelled> {
               ),
               BottomNavigationBarItem(
                 icon: GestureDetector(
-                  onTap: () => Navigator.of(context).push(
+                  onTap: () => Navigator.of(context).pushReplacement(
                       MaterialPageRoute(builder: (context) => cancelled())),
                   child: Icon(Icons.text_snippet_outlined),
                 ),
@@ -192,20 +220,21 @@ class _cancelledState extends State<cancelled> {
               ),
               BottomNavigationBarItem(
                   icon: GestureDetector(
-                      onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => calander_1())),
+                      onTap: () => Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                              builder: (context) => calander_1())),
                       child: Icon(Icons.calendar_month_outlined)),
                   label: 'Calender'),
               BottomNavigationBarItem(
                   icon: GestureDetector(
-                      onTap: () => Navigator.of(context).push(
+                      onTap: () => Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (context) => chats())),
                       child: Icon(Icons.message_outlined)),
                   label: 'Inbox'),
               BottomNavigationBarItem(
                   icon: GestureDetector(
-                      onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => chats())),
+                      onTap: () => Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => profile_1())),
                       child: Icon(Icons.person_outline_rounded)),
                   label: 'Profile'),
             ],

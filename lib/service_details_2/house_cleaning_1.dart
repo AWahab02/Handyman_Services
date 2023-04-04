@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:task/Account_Setup/create_PIN.dart';
 import 'package:task/Account_Setup/fingerprint.dart';
 import 'package:task/color_constants.dart';
+import 'package:task/final_booking/booking_page1.dart';
 import 'package:task/icon_constants.dart';
 import 'package:task/widgets/account_create_country.dart';
 import 'package:task/widgets/account_create_field.dart';
@@ -51,8 +52,8 @@ class _cleaning_bookingState extends State<cleaning_booking> {
               cleaning_booking_tile(title: "Dining Room"),
               cleaning_booking_tile(title: "Garage"),
               GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => create_pin())),
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => booking_1())),
                 child: Container(
                   margin: EdgeInsets.symmetric(vertical: 24),
                   child: Center(
@@ -77,13 +78,19 @@ class _cleaning_bookingState extends State<cleaning_booking> {
   }
 }
 
-class cleaning_booking_tile extends StatelessWidget {
+class cleaning_booking_tile extends StatefulWidget {
   final String title;
   const cleaning_booking_tile({
     super.key,
     required this.title,
   });
 
+  @override
+  State<cleaning_booking_tile> createState() => _cleaning_booking_tileState();
+}
+
+class _cleaning_booking_tileState extends State<cleaning_booking_tile> {
+  int num = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -95,10 +102,10 @@ class cleaning_booking_tile extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 195,
+            width: 180,
             padding: EdgeInsets.only(left: 24),
             child: Text(
-              title,
+              widget.title,
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
             ),
@@ -106,7 +113,10 @@ class cleaning_booking_tile extends StatelessWidget {
           Container(
             height: 40,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                if (num > 0) num--;
+                setState(() {});
+              },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -129,15 +139,20 @@ class cleaning_booking_tile extends StatelessWidget {
             width: 20,
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: Text(
-              "0",
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
+              num.toString(),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 10),
             ),
           ),
           Container(
             height: 40,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                if (num < 10) num++;
+                setState(() {});
+              },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

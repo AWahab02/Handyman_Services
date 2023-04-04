@@ -36,6 +36,7 @@ class _account_setupState extends State<account_setup> {
               padding: const EdgeInsets.only(top: 35.0),
               child: Center(
                 child: CircleAvatar(
+                  child: Image.asset(profile_icon),
                   backgroundColor: textfield_color,
                   radius: 70,
                 ),

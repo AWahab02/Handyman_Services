@@ -39,20 +39,20 @@ class _laundryState extends State<laundry> {
               child: Sevices(
                 Title_arg: "Laundry Services",
                 Price: "\$24",
-                image: maskgrp1,
+                image: maskgrp3,
                 fullname: "Jane Cooper",
               ),
             ),
             Sevices(
               Title_arg: "Laundry Services",
               Price: "\$26",
-              image: maskgrp2,
+              image: maskgrp1,
               fullname: "Jane Cooper",
             ),
             Sevices(
               Title_arg: "Laundry Woman Ser...",
               Price: "\$19",
-              image: maskgrp3,
+              image: maskgrp2,
               fullname: "Chieko Chu",
             ),
             Sevices(

@@ -39,14 +39,14 @@ class _repairingState extends State<repairing> {
               child: Sevices(
                 Title_arg: "Car Repairing",
                 Price: "\$24",
-                image: maskgrp1,
+                image: maskgrp2,
                 fullname: "Wade Warren",
               ),
             ),
             Sevices(
               Title_arg: "Motorcycle Repairing",
               Price: "\$26",
-              image: maskgrp2,
+              image: maskgrp1,
               fullname: "Freida Varnes",
             ),
             Sevices(

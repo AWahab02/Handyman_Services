@@ -89,3 +89,4 @@ const call_icon6 = "assets/call_icon (7).png";
 const call_icon7 = "assets/call_icon (8).png";
 const call_icon8 = "assets/call_icon (9).png";
 const profile_icon = "assets/Ellipse (1).png";
+const card_credit = "assets/card.png";
