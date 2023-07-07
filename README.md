@@ -132,6 +132,7 @@
 <img src =https://github.com/AWahab02/flutter_UI_task/assets/114500718/be8a5a0b-9389-492e-ad36-2f17d79a996f width=300>
 <br />
 
-![Screenshot_20230707_225945](https://github.com/AWahab02/flutter_UI_task/assets/114500718/ad269a33-2596-4c3a-bb74-75f6ea8de5ec width=300>
+<img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/ad269a33-2596-4c3a-bb74-75f6ea8de5ec width=300>
+<br />
 
-![Screenshot_20230707_225950](https://github.com/AWahab02/flutter_UI_task/assets/114500718/0549116d-1103-469d-bb05-c45949b031da)
+<img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/0549116d-1103-469d-bb05-c45949b031da width=300>
