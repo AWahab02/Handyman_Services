@@ -1,15 +1,25 @@
+# Handyman Services - A Cleaning Service App UI
+- Here is a simple path that shows signin/signup -> homescreen widgets -> booking a cleaning service -> edit profile -> logout
+
+## Splash Screen
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/8cd15d36-0aa5-4fcd-a02b-34f1d3dafb2c width=300>
 <br />
+
+## Initial Loading Page
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/828051f6-a3d4-4975-a23e-7c2e49f62456 width=300>
 <br />
+
+## Introduction Carousel
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/51efb713-af62-4631-bff6-28c52b988df5 width=300>
 <br />
 
+## SignIn 
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/b109779c-6464-4dce-ae83-bd06b95fcf36 width=300>
 
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/52212102-b2c7-4d15-afd5-78105f997fdb width=300>
 <br />
 
+## SignUp
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/6d5f602c-3038-4794-bdc1-1b0af7da23e8 width=300>
 
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/f312735a-8d4d-4964-976b-ac0762902565 width=300>
@@ -21,27 +31,35 @@
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/0e5ff45c-79c3-45ac-b746-83e44aad00ec width=300>
 <br />
 
+## HomePage
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/e77d6840-7175-463f-b12a-88a78f686aad width=300>
 <br />
 
+## Popular Cleaning Services Page
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/9121f0f4-6d5e-48de-8b0f-e64e98dd6c8f width=300>
 <br />
 
+## Notifications
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/31732975-d685-4d98-9832-c25a2eb508fc width=300>
 <br />
 
+## Bookmarks
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/58ba9c62-c529-4a1b-82f3-c09b11f78ad0 width=300>
 <br />
 
+## Search Filter
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/d91486e3-4ba3-44bb-a64e-76026f5db11f width=300>
 <br />
 
+## Special Offers
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/d1e1c868-8724-4237-b2a3-eb3054d49f25 width=300>
 <br />
 
+## All Services
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/9a5f17ff-d740-4ad5-a6c8-4a23f2fc0e31 width=300>
 <br />
 
+## *Booking a Cleaning Service Path Starts Here*
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/25fd9aa2-aa46-45c2-a507-87913493e551 width=300>
 <br />
 
@@ -80,6 +98,8 @@
 
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/04c5c60f-ad3d-4317-9e0c-ce4c82797d52 width=300>
 <br />
+
+## Booking Completed
 
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/2892c043-4b2b-4beb-ac4d-7248050223f3 width=300>
 <br />
