@@ -1,4 +1,4 @@
-![Screenshot_20230707_225507](https://github.com/AWahab02/flutter_UI_task/assets/114500718/8cd15d36-0aa5-4fcd-a02b-34f1d3dafb2c)
+<img src= ![Screenshot_20230707_225507](https://github.com/AWahab02/flutter_UI_task/assets/114500718/8cd15d36-0aa5-4fcd-a02b-34f1d3dafb2c width=300) 
 
 ![Screenshot_20230707_225512](https://github.com/AWahab02/flutter_UI_task/assets/114500718/828051f6-a3d4-4975-a23e-7c2e49f62456)
 
