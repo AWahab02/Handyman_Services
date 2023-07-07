@@ -1,6 +1,5 @@
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/8cd15d36-0aa5-4fcd-a02b-34f1d3dafb2c width=300>
-
-
+<br />
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/828051f6-a3d4-4975-a23e-7c2e49f62456 width=300>
 
 <img src=https://github.com/AWahab02/flutter_UI_task/assets/114500718/51efb713-af62-4631-bff6-28c52b988df5 width=300>
