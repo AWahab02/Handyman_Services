@@ -1,1 +1,7 @@
-
+![Screenshot_20230707_225507](https://github.com/AWahab02/flutter_UI_task/assets/114500718/8cd15d36-0aa5-4fcd-a02b-34f1d3dafb2c)
+![Screenshot_20230707_225512](https://github.com/AWahab02/flutter_UI_task/assets/114500718/828051f6-a3d4-4975-a23e-7c2e49f62456)
+![Screenshot_20230707_225518](https://github.com/AWahab02/flutter_UI_task/assets/114500718/51efb713-af62-4631-bff6-28c52b988df5)
+![Screenshot_20230707_225527](https://github.com/AWahab02/flutter_UI_task/assets/114500718/b109779c-6464-4dce-ae83-bd06b95fcf36)
+![Screenshot_20230707_225535](https://github.com/AWahab02/flutter_UI_task/assets/114500718/52212102-b2c7-4d15-afd5-78105f997fdb)
+![Screenshot_20230707_225539](https://github.com/AWahab02/flutter_UI_task/assets/114500718/6d5f602c-3038-4794-bdc1-1b0af7da23e8)
+![Screenshot_20230707_225550](https://github.com/AWahab02/flutter_UI_task/assets/114500718/f312735a-8d4d-4964-976b-ac0762902565)
